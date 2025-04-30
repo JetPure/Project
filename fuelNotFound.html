@@ -4,69 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAF Fuel Stock Error Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main
-      class="flex overflow-hidden flex-col items-center px-5 py-12 mx-auto w-full bg-neutral-800 max-w-[480px]"
-    >
-      <header class="flex gap-3 self-stretch">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/023c781f2a86ad865571e754740dd0284146b8ad?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420"
-          class="object-contain shrink-0 self-start mt-4 aspect-[1.84] w-[68px]"
-          alt="Logo"
-        />
-        <div class="flex gap-0.5">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe030afa73d7d31fc1b6597de39e764ac88ed4f6?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420"
-            class="object-contain shrink-0 max-w-full aspect-[1.39] w-[164px]"
-            alt="Brand logo"
-          />
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f35ef95fc94342486d1be13695da78749f1215?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420"
-            class="object-contain shrink-0 my-auto aspect-[0.95] w-[41px]"
-            alt="Brand icon"
-          />
+    <main class="error-page">
+      <header class="header-section">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/023c781f2a86ad865571e754740dd0284146b8ad?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420" class="logo-image" alt="Logo" />
+        <div class="brand-container">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe030afa73d7d31fc1b6597de39e764ac88ed4f6?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420" class="brand-logo" alt="Brand logo" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/12f35ef95fc94342486d1be13695da78749f1215?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420" class="brand-icon" alt="Brand icon" />
         </div>
-        <div class="flex gap-3 my-auto">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9b2ebd656bef265536fa73919c7ee1ea637c8dd5?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420"
-            class="object-contain shrink-0 self-start aspect-[1.04] w-[29px]"
-            alt="Icon 1"
-          />
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ba399458d7b8ca090b0b1bdc50cf56c422988f45?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420"
-            class="object-contain shrink-0 aspect-[1.1] w-[34px]"
-            alt="Icon 2"
-          />
+        <div class="icon-container">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9b2ebd656bef265536fa73919c7ee1ea637c8dd5?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420" class="icon-one" alt="Icon 1" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ba399458d7b8ca090b0b1bdc50cf56c422988f45?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420" class="icon-two" alt="Icon 2" />
         </div>
       </header>
 
-      <h1 class="mt-24 text-4xl font-bold text-center text-slate-500">
-        Fuel Not Found
-      </h1>
+      <h1 class="error-title">Fuel Not Found</h1>
 
       <img
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/4dc339d3a48a98bfa76d25129637c64e9a1554df?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420"
-        class="object-contain mt-24 max-w-full aspect-square w-[173px]"
+        class="error-illustration"
         alt="Fuel not found illustration"
       />
 
-      <div class="mt-28 w-full flex flex-col items-center gap-4">
-        <button
-          class="flex overflow-hidden justify-center items-center w-full text-2xl tracking-normal leading-8 text-center text-white rounded-lg shadow bg-slate-500 max-w-[304px] min-h-[58px]"
-        >
-          <span class="gap-2 self-stretch px-4 my-auto min-h-8 min-w-60">
-            Search Agian
-          </span>
+      <div class="button-container">
+        <button class="action-button">
+          <span class="button-text"> Search Agian </span>
         </button>
 
-        <button
-          class="flex overflow-hidden justify-center items-center w-full text-2xl tracking-normal leading-8 text-center text-white rounded-lg shadow bg-slate-500 max-w-[304px] min-h-[58px]"
-        >
-          <span class="gap-2 self-stretch px-4 my-auto min-h-8 min-w-60">
-            Back to Manage Fuel page
-          </span>
+        <button class="action-button">
+          <span class="button-text"> Back to Manage Fuel page </span>
         </button>
       </div>
     </main>
