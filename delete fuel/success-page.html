@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success - iPhone 16 Pro</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="iphone-container">
+      <div class="iphone-frame">
+        <!-- iPhone Elements -->
+        <div class="iphone-notch"></div>
+        <div class="status-bar">
+          <div class="status-left">9:41</div>
+          <div class="status-right">
+            <span class="signal">●●●●</span>
+            <span class="wifi">●●●</span>
+            <span class="battery">100%</span>
+          </div>
+        </div>
+
+        <!-- App Content -->
+        <main class="app-content success-content">
+          <div class="success-icon">✓</div>
+          <h1 class="success-title">Success!</h1>
+          <p class="success-message" id="success-message">
+            Fuel has been removed successfully.
+          </p>
+
+          <button class="continue-button" id="continue-button">
+            <span class="button-text">Continue</span>
+          </button>
+        </main>
+
+        <!-- iPhone Home Indicator -->
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get URL parameters to determine which fuel was removed
+        const urlParams = new URLSearchParams(window.location.search);
+        const removedFuel = urlParams.get("removed");
+
+        // Update success message based on which fuel was removed
+        const successMessage = document.getElementById("success-message");
+        if (removedFuel === "saf") {
+          successMessage.textContent = "SAF has been removed successfully.";
+        } else if (removedFuel === "jetfuel") {
+          successMessage.textContent =
+            "Jet Fuel has been removed successfully.";
+        }
+
+        // Add event listener to continue button
+        const continueButton = document.getElementById("continue-button");
+        continueButton.addEventListener("click", function () {
+          // Navigate to appropriate page based on which fuel was removed
+          if (removedFuel === "saf") {
+            window.location.href = "saf-removed.html";
+          } else if (removedFuel === "jetfuel") {
+            window.location.href = "jet-fuel-removed.html";
+          } else {
+            window.location.href = "delete-fuel-page.html";
+          }
+        });
+
+        // Auto-redirect after 2 seconds
+        setTimeout(function () {
+          continueButton.click();
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>

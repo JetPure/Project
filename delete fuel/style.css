@@ -1,0 +1,344 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family:
+      "Inter",
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    background-color: #f5f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* iPhone 16 Pro Container and Frame */
+  .iphone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .iphone-frame {
+    width: 402px;
+    height: 874px;
+    background-color: #1a2525; /* App background color */
+    border-radius: 55px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 14px solid #1a1a1a;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* iPhone UI Elements */
+  .iphone-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 34px;
+    background-color: #1a1a1a;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    z-index: 10;
+  }
+  
+  .status-bar {
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .status-right {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .home-indicator {
+    height: 5px;
+    width: 140px;
+    background-color: white;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* App Content */
+  .app-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 10px 0 20px;
+  }
+  
+  /* Header Section */
+  .app-header {
+    padding: 0 14px;
+    margin-top: 10px;
+  }
+  
+  .header-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .logo-left {
+    width: 55px;
+    aspect-ratio: 1.84;
+    object-fit: contain;
+    margin-top: 18px;
+  }
+  
+  .center-logos {
+    display: flex;
+    align-items: stretch;
+    gap: 6px;
+  }
+  
+  .main-logo {
+    width: 160px;
+    aspect-ratio: 1.71;
+    object-fit: contain;
+  }
+  
+  .secondary-logo {
+    width: 24px;
+    aspect-ratio: 1.04;
+    object-fit: contain;
+    align-self: flex-start;
+    margin-top: 20px;
+  }
+  
+  .logo-right {
+    width: 28px;
+    aspect-ratio: 1.1;
+    object-fit: contain;
+    margin-top: 20px;
+  }
+  
+  .page-title {
+    color: rgba(89, 161, 141, 1);
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Dividers */
+  .divider {
+    border: none;
+    border-top: 4px solid rgba(255, 255, 255, 1);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 350px;
+  }
+  
+  /* Fuel Sections */
+  .fuel-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 340px;
+    margin: 40px auto 0;
+    gap: 15px;
+  }
+  
+  .fuel-info {
+    display: flex;
+    gap: 5px;
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+  }
+  
+  .fuel-icon {
+    width: 36px;
+    aspect-ratio: 1.05;
+    object-fit: contain;
+  }
+  
+  .fuel-details {
+    line-height: 1.4;
+  }
+  
+  .highlight-text {
+    color: rgba(89, 161, 141, 1);
+  }
+  
+  /* Buttons */
+  .remove-button {
+    background-color: #59a18d;
+    border-radius: 8px;
+    border: none;
+    box-shadow:
+      0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+      0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+    cursor: pointer;
+  }
+  
+  .back-button {
+    background-color: #59a18d;
+    border-radius: 8px;
+    border: none;
+    box-shadow:
+      0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+      0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    min-height: 54px;
+    width: 220px;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 120px auto 0;
+    cursor: pointer;
+  }
+  
+  .button-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    color: white;
+    font-weight: 400;
+    padding: 0 16px;
+    line-height: 30px;
+  }
+  
+  /* Success Page Styles */
+  .success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .success-icon {
+    font-size: 100px;
+    color: #59a18d;
+    background-color: rgba(89, 161, 141, 0.2);
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .success-title {
+    color: #59a18d;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .success-message {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 40px;
+    line-height: 1.4;
+  }
+  
+  .continue-button {
+    background-color: #59a18d;
+    border-radius: 8px;
+    border: none;
+    box-shadow:
+      0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+      0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    min-height: 54px;
+    width: 220px;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  /* Interactive States */
+  .remove-button:hover,
+  .back-button:hover,
+  .continue-button:hover {
+    background-color: #4a8f7d;
+  }
+  
+  .remove-button:active,
+  .back-button:active,
+  .continue-button:active {
+    background-color: #3d7a6a;
+    transform: translateY(1px);
+  }
+  
+  /* Focus States for Accessibility */
+  .remove-button:focus,
+  .back-button:focus,
+  .continue-button:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+  
+  /* Ensure scrolling is smooth */
+  .app-content::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  
+  /* Animation for success page */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .success-icon,
+  .success-title,
+  .success-message,
+  .continue-button {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .success-title {
+    animation-delay: 0.2s;
+  }
+  
+  .success-message {
+    animation-delay: 0.4s;
+  }
+  
+  .continue-button {
+    animation-delay: 0.6s;
+  }
+  

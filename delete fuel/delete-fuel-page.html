@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Fuel - iPhone 16 Pro</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="iphone-container">
+      <div class="iphone-frame">
+        <!-- iPhone Elements -->
+        <div class="iphone-notch"></div>
+        <div class="status-bar">
+          <div class="status-left">9:41</div>
+          <div class="status-right">
+            <span class="signal">●●●●</span>
+            <span class="wifi">●●●</span>
+            <span class="battery">100%</span>
+          </div>
+        </div>
+
+        <!-- App Content -->
+        <main class="app-content">
+          <header class="app-header">
+            <div class="header-row">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/023c781f2a86ad865571e754740dd0284146b8ad?placeholderIfAbsent=true&apiKey=988b1a272cfe46c59d2774c98aa82c87" class="logo-left" alt="Logo" />
+              <div class="center-logos">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed6f615234a04ae6c99a3eacee06f0f8191b5da4?placeholderIfAbsent=true&apiKey=988b1a272cfe46c59d2774c98aa82c87" class="main-logo" alt="Main logo" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2727a693d30f51bc188a8187da350f679b56d2bb?placeholderIfAbsent=true&apiKey=988b1a272cfe46c59d2774c98aa82c87" class="secondary-logo" alt="Secondary logo" />
+              </div>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c46b7d5c0a7074973f9f9c7cfd33fda3d53ed6c?placeholderIfAbsent=true&apiKey=988b1a272cfe46c59d2774c98aa82c87" class="logo-right" alt="Right logo" />
+            </div>
+            <h1 class="page-title">Delete Fuel</h1>
+          </header>
+
+          <hr class="divider" />
+
+          <section class="fuel-section" id="saf-section">
+            <div class="fuel-info">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/082c7e15a8784e857b7f26e0efe2485991717e95?placeholderIfAbsent=true&apiKey=988b1a272cfe46c59d2774c98aa82c87" class="fuel-icon" alt="SAF fuel icon" />
+              <p class="fuel-details">
+                SAF
+                <br />
+                <br />
+                amount:
+                <span class="highlight-text">#</span>
+                <br />
+                Price:
+                <span class="highlight-text">AED</span>
+              </p>
+            </div>
+            <button class="remove-button" id="remove-saf">
+              <span class="button-text">Remove</span>
+            </button>
+          </section>
+
+          <hr class="divider" />
+
+          <section class="fuel-section" id="jet-fuel-section">
+            <div class="fuel-info">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/082c7e15a8784e857b7f26e0efe2485991717e95?placeholderIfAbsent=true&apiKey=988b1a272cfe46c59d2774c98aa82c87" class="fuel-icon" alt="Jet Fuel icon" />
+              <p class="fuel-details">
+                Jet Fuel
+                <br />
+                <br />
+                amount:
+                <span class="highlight-text">#</span>
+                <br />
+                Price:
+                <span class="highlight-text">AED</span>
+              </p>
+            </div>
+            <button class="remove-button" id="remove-jet-fuel">
+              <span class="button-text">Remove</span>
+            </button>
+          </section>
+
+          <button class="back-button" id="back-button">
+            <span class="button-text">Back to main page</span>
+          </button>
+        </main>
+
+        <!-- iPhone Home Indicator -->
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get button elements
+        const removeSafButton = document.getElementById("remove-saf");
+        const removeJetFuelButton = document.getElementById("remove-jet-fuel");
+        const backButton = document.getElementById("back-button");
+
+        // Add event listeners
+        removeSafButton.addEventListener("click", function () {
+          // Navigate to success page with SAF removed info
+          window.location.href = "success-page.html?removed=saf";
+        });
+
+        removeJetFuelButton.addEventListener("click", function () {
+          // Navigate to success page with Jet Fuel removed info
+          window.location.href = "success-page.html?removed=jetfuel";
+        });
+
+        backButton.addEventListener("click", function () {
+          // For demo purposes, just reload the current page
+          alert("Back to main page clicked");
+          // In a real app, you would navigate to the main page
+          // window.location.href = 'main-page.html';
+        });
+      });
+    </script>
+  </body>
+</html>

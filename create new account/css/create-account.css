@@ -1,0 +1,440 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f5f5f7;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* iPhone 16 Pro Frame */
+.device-container {
+  position: relative;
+  width: 430px;
+  height: 932px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iphone-frame {
+  width: 402px;
+  height: 874px;
+  background-color: #1a2525;
+  border-radius: 55px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 0 0 6px #1a1a1c,
+    0 0 0 10px #000;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Status Bar */
+.status-bar {
+  height: 47px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 14px 25px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.status-bar-left {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.status-bar-right {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.dynamic-island {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 126px;
+  height: 37px;
+  background-color: #000;
+  border-radius: 20px;
+  z-index: 20;
+}
+
+/* Home Indicator */
+.home-indicator {
+  height: 34px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.indicator-bar {
+  width: 134px;
+  height: 5px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* App Container */
+.app-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+/* Main container */
+.create-account-page {
+  background-color: rgba(26, 37, 37, 1);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 10px 16px 0;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Header section */
+.page-header {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding-top: 30px; /* Extra padding to account for dynamic island */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+
+.logo-small {
+  width: 50px;
+  object-fit: contain;
+}
+
+.logo-large {
+  width: 120px;
+  object-fit: contain;
+}
+
+.page-title {
+  color: rgba(89, 161, 141, 1);
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.login-prompt {
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.login-link {
+  text-decoration: underline;
+  color: rgba(89, 161, 141, 1);
+  cursor: pointer;
+}
+
+/* Form elements */
+.signup-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-label {
+  color: rgba(89, 161, 141, 1);
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.form-input {
+  border-radius: 8px;
+  background: linear-gradient(0deg, #59a18d 0%, #59a18d 100%);
+  width: 100%;
+  padding: 10px 8px;
+  font-size: 18px;
+  color: rgba(255, 253, 253, 1);
+  font-weight: 700;
+  border: none;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.email-input {
+  border-radius: 8px;
+  background: linear-gradient(0deg, #59a18d 0%, #59a18d 100%);
+  width: 100%;
+  padding: 10px 8px;
+  font-size: 18px;
+  color: rgba(255, 249, 249, 1);
+  font-weight: 700;
+}
+
+.email-prefix {
+  color: rgba(240, 234, 234, 1);
+  text-decoration: none;
+}
+
+/* Checkbox styling */
+.checkbox-group {
+  margin-top: 8px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox {
+  border-radius: 4px;
+  border: 2px dashed rgba(9, 90, 173, 1);
+  display: flex;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hidden-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.checkbox-icon {
+  width: 14px;
+  height: 10px;
+  object-fit: contain;
+}
+
+.checkbox-label {
+  color: rgba(89, 161, 141, 1);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Role selection */
+.role-selection {
+  border: none;
+  margin-top: 12px;
+  padding: 0;
+}
+
+.role-legend {
+  color: rgba(89, 161, 141, 1);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.role-option {
+  margin-bottom: 12px;
+}
+
+.role-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.role-checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.hidden-radio {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-radio {
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(89, 161, 141, 0.5);
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.custom-radio.selected,
+.hidden-radio:checked + .custom-radio {
+  background-color: rgba(89, 161, 141, 0.3);
+  border: 2px solid rgba(89, 161, 141, 1);
+}
+
+.custom-radio.selected::after,
+.hidden-radio:checked + .custom-radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: rgba(89, 161, 141, 1);
+  border-radius: 2px;
+}
+
+.role-label {
+  font-size: 16px;
+  color: rgba(89, 161, 141, 1);
+  font-weight: 700;
+}
+
+/* Submit button */
+.submit-button {
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  opacity: 0.5;
+  box-shadow:
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  background-color: #59a18d;
+  display: flex;
+  margin: 15px auto 0;
+  height: 50px;
+  width: 200px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.submit-button.active {
+  opacity: 1;
+}
+
+.button-text {
+  font-family:
+    Roboto,
+    -apple-system,
+    Helvetica,
+    sans-serif;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  line-height: 28px;
+  padding: 0 16px;
+}
+
+/* Warning message */
+.warning-message {
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  font-family:
+    Roboto,
+    -apple-system,
+    Helvetica,
+    sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Page transitions */
+.app-container {
+  transition: opacity 0.3s ease;
+}
+
+body.page-transition .app-container {
+  opacity: 0;
+}
+
+/* Scrollbar styling */
+.app-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.app-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.app-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+/* Media queries for different screen sizes */
+@media screen and (max-height: 900px) {
+  .device-container {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .device-container {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .device-container {
+    transform: scale(0.85);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .device-container {
+    transform: scale(0.75);
+  }
+}

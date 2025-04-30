@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Create New Account - iPhone 16 Pro</title>
+    <link rel="stylesheet" href="css/create-account.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="device-container">
+      <div class="iphone-frame">
+        <!-- iPhone Status Bar -->
+        <div class="status-bar">
+          <div class="status-bar-left">
+            <span class="time">9:41</span>
+          </div>
+          <div class="dynamic-island"></div>
+          <div class="status-bar-right">
+            <span class="signal-icon">
+              <svg
+                width="18"
+                height="12"
+                viewBox="0 0 18 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1 8H3V10H1V8Z" fill="white" />
+                <path d="M5 6H7V10H5V6Z" fill="white" />
+                <path d="M9 4H11V10H9V4Z" fill="white" />
+                <path d="M13 2H15V10H13V2Z" fill="white" />
+              </svg>
+            </span>
+            <span class="wifi-icon">
+              <svg
+                width="16"
+                height="12"
+                viewBox="0 0 16 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 9.5C8.83 9.5 9.5 10.17 9.5 11C9.5 11.83 8.83 12.5 8 12.5C7.17 12.5 6.5 11.83 6.5 11C6.5 10.17 7.17 9.5 8 9.5ZM8 0C12.07 0 15.5 2.13 16 5H14.92C14.44 2.68 11.56 1 8 1C4.44 1 1.56 2.68 1.08 5H0C0.5 2.13 3.93 0 8 0ZM8 3C10.11 3 11.9 3.92 12.55 5.25H11.45C10.88 4.36 9.55 3.75 8 3.75C6.45 3.75 5.12 4.36 4.55 5.25H3.45C4.1 3.92 5.89 3 8 3Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <span class="battery-icon">
+              <svg
+                width="25"
+                height="12"
+                viewBox="0 0 25 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="21"
+                  height="11"
+                  rx="2.5"
+                  stroke="white"
+                />
+                <rect x="2" y="2" width="18" height="8" rx="1" fill="white" />
+                <path
+                  d="M23 4V8C23.8047 7.66122 24.328 6.87313 24.328 6C24.328 5.12687 23.8047 4.33878 23 4Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- App Content -->
+        <div class="app-container">
+          <main class="create-account-page">
+            <header class="page-header">
+              <div class="logo-container">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/023c781f2a86ad865571e754740dd0284146b8ad?placeholderIfAbsent=true&apiKey=988b1a272cfe46c59d2774c98aa82c87" alt="Logo" class="logo-small" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/282bc9699021126234f6f66324808909da4e3e41?placeholderIfAbsent=true&apiKey=988b1a272cfe46c59d2774c98aa82c87" alt="Company Logo" class="logo-large" />
+              </div>
+              <h1 class="page-title">Create New Account</h1>
+              <p class="login-prompt">
+                Already have an account?
+                <a href="#" class="login-link">Log in here</a>
+              </p>
+            </header>
+
+            <form class="signup-form" id="signupForm">
+              <div class="form-group">
+                <label for="username" class="form-label">Username</label>
+                <input
+                  type="text"
+                  id="username"
+                  class="form-input"
+                  value="SampleUser"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email/phone number</label>
+                <div class="email-input">
+                  <a href="mailto:sampleUser@Softwave.com" class="email-prefix"
+                    >sampleUser</a
+                  >@Softwave.com
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  class="form-input"
+                  value="******"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="confirm-password" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  id="confirm-password"
+                  class="form-input"
+                  value="******"
+                />
+              </div>
+
+              <div class="form-group checkbox-group">
+                <div class="checkbox-container">
+                  <label class="checkbox">
+                    <input
+                      type="checkbox"
+                      id="twoFactorAuth"
+                      class="hidden-checkbox"
+                    />
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9a595761c9a14932392392cbbd88b22e9190864c?placeholderIfAbsent=true&apiKey=988b1a272cfe46c59d2774c98aa82c87" alt="Check" class="checkbox-icon" />
+                  </label>
+                  <span class="checkbox-label"
+                    >Enable two-factor authentication</span
+                  >
+                </div>
+              </div>
+
+              <fieldset class="role-selection">
+                <legend class="role-legend">YOU ARE A..</legend>
+
+                <div class="role-option">
+                  <label
+                    class="role-checkbox-container"
+                    onclick="window.location.href='customer-selected.html'"
+                  >
+                    <input
+                      type="radio"
+                      name="role"
+                      value="customer"
+                      id="customerRole"
+                      class="hidden-radio"
+                    />
+                    <span class="custom-radio"></span>
+                    <span class="role-label">Customer</span>
+                  </label>
+                </div>
+
+                <div class="role-option">
+                  <label
+                    class="role-checkbox-container"
+                    onclick="window.location.href='supplier-selected.html'"
+                  >
+                    <input
+                      type="radio"
+                      name="role"
+                      value="supplier"
+                      id="supplierRole"
+                      class="hidden-radio"
+                    />
+                    <span class="custom-radio"></span>
+                    <span class="role-label">Supplier</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <button type="button" id="createAccountBtn" class="submit-button">
+                <span class="button-text">Create account</span>
+              </button>
+
+              <p class="warning-message" id="warningMessage">
+                ⚠ Please select a role to continue.
+              </p>
+            </form>
+          </main>
+        </div>
+
+        <!-- Home Indicator -->
+        <div class="home-indicator">
+          <div class="indicator-bar"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

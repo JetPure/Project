@@ -1,0 +1,442 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* iPhone 16 Pro frame styles */
+  .iphone-frame {
+    position: relative;
+    width: 402px;
+    height: 874px;
+    background-color: #1a1a1a;
+    border-radius: 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border: 14px solid #1a1a1a;
+  }
+  
+  .iphone-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 35px;
+    background-color: #1a1a1a;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .notch-content {
+    width: 80px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 5px;
+  }
+  
+  .iphone-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #1a2525;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .iphone-button {
+    position: absolute;
+    background-color: #2a2a2a;
+  }
+  
+  .volume-up {
+    top: 120px;
+    left: -14px;
+    width: 4px;
+    height: 60px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  
+  .volume-down {
+    top: 200px;
+    left: -14px;
+    width: 4px;
+    height: 60px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  
+  .power-button {
+    top: 180px;
+    right: -14px;
+    width: 4px;
+    height: 80px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  
+  .iphone-home-indicator {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 3px;
+    z-index: 10;
+  }
+  
+  /* App container styles */
+  .app-container {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 35px; /* Space for the notch */
+  }
+  
+  /* App header styles */
+  .app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .back-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .app-logo {
+    width: 164px;
+    height: 118px;
+  }
+  
+  .header-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .action-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Rejection content styles */
+  .rejection-content {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .error-image {
+    width: 111px;
+    height: 102px;
+    margin: 20px auto;
+  }
+  
+  .rejection-title {
+    color: #59a18d;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+  
+  .rejection-message {
+    font-family: "Linden Hill", serif;
+    font-size: 32px;
+    margin: 20px 0;
+  }
+  
+  .rejection-reasons {
+    font-family: "Linden Hill", serif;
+    font-size: 32px;
+    margin: 20px 0;
+  }
+  
+  .rejection-instruction {
+    font-family: "Linden Hill", serif;
+    font-size: 32px;
+    margin: 20px 0;
+  }
+  
+  .try-again-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    width: 235px;
+    height: 57px;
+    border-radius: 8px;
+    border: none;
+    background-color: #59a18d;
+    box-shadow:
+      0px 1px 2px rgba(0, 0, 0, 0.3),
+      0px 1px 3px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .try-again-button:hover {
+    background-color: #4a8f7d;
+  }
+  
+  /* Verification page styles */
+  .verify-content {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .verify-title {
+    color: #59a18d;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+  
+  .verify-instruction {
+    font-family: "Linden Hill", serif;
+    font-size: 28px;
+    margin: 20px 0;
+  }
+  
+  .license-form {
+    width: 90%;
+    max-width: 320px;
+    background-color: #243030;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .license-input {
+    width: 100%;
+    height: 50px;
+    background-color: #1a2525;
+    border: 1px solid #59a18d;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 15px;
+    margin-bottom: 20px;
+  }
+  
+  .form-separator {
+    width: 100%;
+    height: 1px;
+    background-color: #59a18d;
+    margin: 15px 0;
+    opacity: 0.5;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .form-label {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+  
+  .form-select,
+  .form-date {
+    width: 100%;
+    height: 45px;
+    background-color: #1a2525;
+    border: 1px solid #59a18d;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 15px;
+  }
+  
+  .verify-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: #59a18d;
+    box-shadow:
+      0px 1px 2px rgba(0, 0, 0, 0.3),
+      0px 1px 3px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .verify-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: #59a18d;
+    box-shadow:
+      0px 4px 8px rgba(0, 0, 0, 0.3),
+      0px 6px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    padding: 0 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .verify-button:hover {
+    background-color: #4a8f7d;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    border: 2px solid #7ac1ad;
+  }
+  
+  .verify-button:active {
+    transform: translateY(1px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 991px) {
+    .iphone-frame {
+      transform: scale(0.9);
+    }
+  
+    .app-header {
+      flex-direction: column;
+    }
+  
+    .header-actions {
+      justify-content: center;
+    }
+  
+    .try-again-button {
+      font-family: "Roboto", sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+      width: 235px;
+      height: 57px;
+      border-radius: 8px;
+      border: none;
+      background-color: #59a18d;
+      box-shadow:
+        0px 4px 8px rgba(0, 0, 0, 0.3),
+        0px 6px 12px rgba(0, 0, 0, 0.2);
+      margin: 30px auto;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 5;
+      text-align: center;
+      padding: 0 15px;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+  
+    .try-again-button:hover {
+      background-color: #4a8f7d;
+      transform: translateY(-2px);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+      border: 2px solid #7ac1ad;
+    }
+  
+    .try-again-button:active {
+      transform: translateY(1px);
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  
+    .rejection-message,
+    .rejection-reasons,
+    .rejection-instruction {
+      font-size: 28px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .iphone-frame {
+      transform: scale(0.8);
+    }
+  
+    .app-header {
+      display: none;
+    }
+  
+    .try-again-button {
+      width: 50px;
+      height: 50px;
+      font-size: 10px;
+    }
+  
+    .rejection-message,
+    .rejection-reasons,
+    .rejection-instruction {
+      font-size: 24px;
+    }
+  
+    .rejection-title {
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .iphone-frame {
+      transform: scale(0.7);
+    }
+  }
+  

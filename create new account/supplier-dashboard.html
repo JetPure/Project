@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Supplier Dashboard - iPhone 16 Pro</title>
+    <link rel="stylesheet" href="create-account.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        background-color: #f5f5f7;
+        font-family:
+          Inter,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* iPhone 16 Pro Frame */
+      .device-container {
+        position: relative;
+        width: 430px;
+        height: 932px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .iphone-frame {
+        width: 402px;
+        height: 874px;
+        background-color: #1a2525;
+        border-radius: 55px;
+        position: relative;
+        overflow: hidden;
+        box-shadow:
+          0 20px 40px rgba(0, 0, 0, 0.2),
+          0 0 0 6px #1a1a1c,
+          0 0 0 10px #000;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Enhanced Status Bar */
+      .status-bar {
+        height: 47px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 14px 25px 0;
+        position: relative;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      .status-bar-left {
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      .status-bar-right {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+      }
+
+      .dynamic-island {
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 126px;
+        height: 37px;
+        background-color: #000;
+        border-radius: 20px;
+        z-index: 20;
+      }
+
+      /* Home Indicator */
+      .home-indicator {
+        height: 34px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      .indicator-bar {
+        width: 134px;
+        height: 5px;
+        background-color: white;
+        border-radius: 3px;
+      }
+
+      /* App Container with visible scrollbar */
+      .app-container {
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(89, 161, 141, 0.6) rgba(26, 37, 37, 0.3);
+      }
+
+      /* Webkit scrollbar styling */
+      .app-container::-webkit-scrollbar {
+        width: 8px;
+        background-color: rgba(26, 37, 37, 0.3);
+      }
+
+      .app-container::-webkit-scrollbar-thumb {
+        background-color: rgba(89, 161, 141, 0.6);
+        border-radius: 4px;
+      }
+
+      .app-container::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(89, 161, 141, 0.8);
+      }
+
+      /* Dashboard page */
+      .dashboard-page {
+        background-color: rgba(26, 37, 37, 1);
+        display: flex;
+        width: 100%;
+        min-height: 100%;
+        padding: 10px 16px 80px;
+        flex-direction: column;
+        overflow-y: visible;
+        overflow-x: hidden;
+      }
+
+      .welcome-section {
+        text-align: center;
+        margin-bottom: 25px;
+        padding-top: 30px;
+      }
+
+      .welcome-title {
+        color: rgba(89, 161, 141, 1);
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .welcome-subtitle {
+        color: white;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .dashboard-card {
+        background: linear-gradient(0deg, #3d7a6c 0%, #59a18d 100%);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-title {
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .card-content {
+        color: rgba(240, 240, 240, 0.9);
+        font-size: 16px;
+        line-height: 1.4;
+      }
+
+      .stats-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+      }
+
+      .stat-item {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 12px;
+        text-align: center;
+        flex: 1;
+        margin: 0 4px;
+      }
+
+      .stat-value {
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 4px;
+      }
+
+      .stat-label {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .dashboard-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .menu-item {
+        background-color: rgba(89, 161, 141, 0.2);
+        border: 2px solid rgba(89, 161, 141, 0.8);
+        border-radius: 8px;
+        padding: 12px;
+        flex: 1 0 calc(50% - 12px);
+        min-width: 120px;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .menu-icon {
+        width: 32px;
+        height: 32px;
+        background-color: rgba(89, 161, 141, 1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .action-button {
+        background-color: rgba(89, 161, 141, 1);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 10px;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      /* Product listing section */
+      .products-section {
+        margin-bottom: 20px;
+      }
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .section-title {
+        color: rgba(89, 161, 141, 1);
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .view-all {
+        color: white;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+
+      .product-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .product-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .product-image {
+        height: 140px;
+        background-color: rgba(89, 161, 141, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+      }
+
+      .product-details {
+        padding: 12px;
+      }
+
+      .product-name {
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      .product-price {
+        color: rgba(89, 161, 141, 1);
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .product-description {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 8px;
+      }
+
+      .product-status {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+        background-color: rgba(89, 161, 141, 0.2);
+        padding: 4px 8px;
+        border-radius: 4px;
+        width: fit-content;
+      }
+
+      .bottom-nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgba(20, 30, 30, 0.9);
+        border-top: 1px solid rgba(89, 161, 141, 0.3);
+        padding: 10px 0;
+        position: fixed;
+        bottom: 34px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 100;
+      }
+
+      .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        font-size: 12px;
+      }
+
+      .nav-icon {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 4px;
+        background-color: rgba(89, 161, 141, 0.8);
+        border-radius: 6px;
+      }
+
+      .logout-button {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 10px;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="device-container">
+      <div class="iphone-frame">
+        <!-- Enhanced iPhone Status Bar -->
+        <div class="status-bar">
+          <div class="status-bar-left">
+            <span class="time">9:41</span>
+          </div>
+          <div class="dynamic-island"></div>
+          <div class="status-bar-right">
+            <span class="signal-icon">
+              <svg
+                width="18"
+                height="12"
+                viewBox="0 0 18 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1 8H3V10H1V8Z" fill="white" />
+                <path d="M5 6H7V10H5V6Z" fill="white" />
+                <path d="M9 4H11V10H9V4Z" fill="white" />
+                <path d="M13 2H15V10H13V2Z" fill="white" />
+              </svg>
+            </span>
+            <span class="wifi-icon">
+              <svg
+                width="16"
+                height="12"
+                viewBox="0 0 16 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 9.5C8.83 9.5 9.5 10.17 9.5 11C9.5 11.83 8.83 12.5 8 12.5C7.17 12.5 6.5 11.83 6.5 11C6.5 10.17 7.17 9.5 8 9.5ZM8 0C12.07 0 15.5 2.13 16 5H14.92C14.44 2.68 11.56 1 8 1C4.44 1 1.56 2.68 1.08 5H0C0.5 2.13 3.93 0 8 0ZM8 3C10.11 3 11.9 3.92 12.55 5.25H11.45C10.88 4.36 9.55 3.75 8 3.75C6.45 3.75 5.12 4.36 4.55 5.25H3.45C4.1 3.92 5.89 3 8 3Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <span class="battery-icon">
+              <svg
+                width="25"
+                height="12"
+                viewBox="0 0 25 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="21"
+                  height="11"
+                  rx="2.5"
+                  stroke="white"
+                />
+                <rect x="2" y="2" width="18" height="8" rx="1" fill="white" />
+                <path
+                  d="M23 4V8C23.8047 7.66122 24.328 6.87313 24.328 6C24.328 5.12687 23.8047 4.33878 23 4Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- App Content with visible scrollbar -->
+        <div class="app-container">
+          <main class="dashboard-page">
+            <header class="page-header">
+              <div class="logo-container">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/023c781f2a86ad865571e754740dd0284146b8ad?placeholderIfAbsent=true&apiKey=988b1a272cfe46c59d2774c98aa82c87" alt="Logo" class="logo-small" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/282bc9699021126234f6f66324808909da4e3e41?placeholderIfAbsent=true&apiKey=988b1a272cfe46c59d2774c98aa82c87" alt="Company Logo" class="logo-large" />
+              </div>
+            </header>
+
+            <section class="welcome-section">
+              <h1 class="welcome-title">Welcome, SampleUser!</h1>
+              <p class="welcome-subtitle">Your Supplier Dashboard</p>
+            </section>
+
+            <section class="dashboard-card">
+              <h2 class="card-title">Supplier Overview</h2>
+              <div class="card-content">
+                <p>
+                  Your supplier account has been successfully created. You can
+                  now manage your products and orders.
+                </p>
+              </div>
+            </section>
+
+            <section class="stats-container">
+              <div class="stat-item">
+                <div class="stat-value">0</div>
+                <div class="stat-label">Products</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">0</div>
+                <div class="stat-label">Orders</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">$0</div>
+                <div class="stat-label">Revenue</div>
+              </div>
+            </section>
+
+            <section class="dashboard-menu">
+              <div class="menu-item">
+                <div class="menu-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11 9H9V2H7V9H5V2H3V9C3 11.12 4.66 12.84 6.75 12.97V22H9.25V12.97C11.34 12.84 13 11.12 13 9V2H11V9ZM16 6V14H18.5V22H21V2C18.24 2 16 4.24 16 6Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                Products
+              </div>
+              <div class="menu-item">
+                <div class="menu-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 17H6V15H18V17ZM18 13H6V11H18V13ZM18 9H6V7H18V9ZM3 22L4.5 20.5L6 22L7.5 20.5L9 22L10.5 20.5L12 22L13.5 20.5L15 22L16.5 20.5L18 22L19.5 20.5L21 22V2L19.5 3.5L18 2L16.5 3.5L15 2L13.5 3.5L12 2L10.5 3.5L9 2L7.5 3.5L6 2L4.5 3.5L3 2V22Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                Orders
+              </div>
+              <div class="menu-item">
+                <div class="menu-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 18V19C21 20.1 20.1 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.9 3.89 3 5 3H19C20.1 3 21 3.9 21 5V6H12C10.89 6 10 6.9 10 8V16C10 17.1 10.89 18 12 18H21ZM12 16H22V8H12V16ZM16 13.5C15.17 13.5 14.5 12.83 14.5 12C14.5 11.17 15.17 10.5 16 10.5C16.83 10.5 17.5 11.17 17.5 12C17.5 12.83 16.83 13.5 16 13.5Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                Payments
+              </div>
+              <div class="menu-item">
+                <div class="menu-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.14 12.94C19.18 12.64 19.2 12.33 19.2 12C19.2 11.68 19.18 11.36 19.13 11.06L21.16 9.48C21.34 9.34 21.39 9.07 21.28 8.87L19.36 5.55C19.24 5.33 18.99 5.26 18.77 5.33L16.38 6.29C15.88 5.91 15.35 5.59 14.76 5.35L14.4 2.81C14.36 2.57 14.16 2.4 13.92 2.4H10.08C9.84 2.4 9.65 2.57 9.61 2.81L9.25 5.35C8.66 5.59 8.12 5.92 7.63 6.29L5.24 5.33C5.02 5.25 4.77 5.33 4.65 5.55L2.74 8.87C2.62 9.08 2.66 9.34 2.86 9.48L4.89 11.06C4.84 11.36 4.8 11.69 4.8 12C4.8 12.31 4.82 12.64 4.87 12.94L2.84 14.52C2.66 14.66 2.61 14.93 2.72 15.13L4.64 18.45C4.76 18.67 5.01 18.74 5.23 18.67L7.62 17.71C8.12 18.09 8.65 18.41 9.24 18.65L9.6 21.19C9.65 21.43 9.84 21.6 10.08 21.6H13.92C14.16 21.6 14.36 21.43 14.39 21.19L14.75 18.65C15.34 18.41 15.88 18.09 16.37 17.71L18.76 18.67C18.98 18.75 19.23 18.67 19.35 18.45L21.27 15.13C21.39 14.91 21.34 14.66 21.15 14.52L19.14 12.94ZM12 15.6C10.02 15.6 8.4 13.98 8.4 12C8.4 10.02 10.02 8.4 12 8.4C13.98 8.4 15.6 10.02 15.6 12C15.6 13.98 13.98 15.6 12 15.6Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                Settings
+              </div>
+            </section>
+
+            <button class="action-button">Add New Product</button>
+
+            <!-- Vertically stacked product section -->
+            <section class="products-section">
+              <div class="section-header">
+                <h2 class="section-title">Your Products</h2>
+                <a href="#" class="view-all">Manage All</a>
+              </div>
+
+              <div class="product-list">
+                <div class="product-card">
+                  <div class="product-image">Product Image 1</div>
+                  <div class="product-details">
+                    <h3 class="product-name">Premium Headphones</h3>
+                    <div class="product-price">$129.99</div>
+                    <p class="product-description">
+                      High-quality wireless headphones with noise cancellation
+                      and premium sound.
+                    </p>
+                    <div class="product-status">In Stock: 24 units</div>
+                  </div>
+                </div>
+
+                <div class="product-card">
+                  <div class="product-image">Product Image 2</div>
+                  <div class="product-details">
+                    <h3 class="product-name">Smart Watch</h3>
+                    <div class="product-price">$199.99</div>
+                    <p class="product-description">
+                      Track your fitness, receive notifications, and more with
+                      this sleek smartwatch.
+                    </p>
+                    <div class="product-status">In Stock: 12 units</div>
+                  </div>
+                </div>
+
+                <div class="product-card">
+                  <div class="product-image">Product Image 3</div>
+                  <div class="product-details">
+                    <h3 class="product-name">Wireless Charger</h3>
+                    <div class="product-price">$49.99</div>
+                    <p class="product-description">
+                      Fast wireless charging pad compatible with all Qi-enabled
+                      devices.
+                    </p>
+                    <div class="product-status">In Stock: 36 units</div>
+                  </div>
+                </div>
+
+                <div class="product-card">
+                  <div class="product-image">Product Image 4</div>
+                  <div class="product-details">
+                    <h3 class="product-name">Bluetooth Speaker</h3>
+                    <div class="product-price">$79.99</div>
+                    <p class="product-description">
+                      Portable waterproof speaker with 20 hours of battery life
+                      and deep bass.
+                    </p>
+                    <div class="product-status">In Stock: 18 units</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="dashboard-card">
+              <h2 class="card-title">Recent Activity</h2>
+              <div class="card-content">
+                <p>Account created - Just now</p>
+                <p>Supplier verification pending</p>
+              </div>
+            </section>
+
+            <a href="create-account.html" class="logout-button">Log Out</a>
+          </main>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+          <div class="nav-item">
+            <div class="nav-icon"></div>
+            Home
+          </div>
+          <div class="nav-item">
+            <div class="nav-icon"></div>
+            Products
+          </div>
+          <div class="nav-item">
+            <div class="nav-icon"></div>
+            Orders
+          </div>
+          <div class="nav-item">
+            <div class="nav-icon"></div>
+            Profile
+          </div>
+        </nav>
+
+        <!-- Home Indicator -->
+        <div class="home-indicator">
+          <div class="indicator-bar"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
