@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #333333; /* bg-neutral-800 */
+    color: white;
+    width: 402px;
+    height: 874px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.container {
+    overflow: hidden;
+    padding-top: 56px; /* pt-14 */
+    padding-bottom: 36px; /* pb-9 */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 480px;
+    background-color: #333333; /* bg-neutral-800 */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    gap: 12px;
+    align-self: stretch;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    gap: 2px;
+}
+
+.icons-container {
+    display: flex;
+    gap: 12px;
+    margin: auto 0;
+}
+
+.title {
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #64748b; /* text-slate-500 */
+}
+
+.fuel-name {
+    margin-top: 40px;
+    font-size: 30px;
+    color: white;
+}
+
+.fuel-image {
+    margin-top: 6px;
+    border-radius: 60px;
+    width: 154px;
+    height: 154px;
+    object-fit: contain;
+}
+
+.amount-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 28px;
+    width: 100%;
+    max-width: 326px;
+    font-size: 30px;
+    color: white;
+}
+
+.amount-labels {
+    display: flex;
+    flex-direction: column;

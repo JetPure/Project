@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.saf-fuel-stock-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 402px;
+  height: 874px;
+  background-color: #1A2525; /* neutral-800 */
+  padding: 48px 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  gap: 12px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.logo-left {
+  object-fit: contain;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 16px;
+  aspect-ratio: 1.84;
+  width: 68px;
+}
+
+.center-logos {
+  display: flex;
+  gap: 2px;
+}
+
+.center-logo-main {
+  object-fit: contain;
+  flex-shrink: 0;
+  max-width: 100%;
+  aspect-ratio: 1.39;
+  width: 164px;
+}
+
+.center-logo-secondary {
+  object-fit: contain;
+  flex-shrink: 0;
+  margin: auto 0;
+  aspect-ratio: 0.95;
+  width: 41px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 12px;
+  margin: auto 0;
+  margin-left: auto;
+}
+
+.icon-left {
+  object-fit: contain;
+  flex-shrink: 0;
+  align-self: flex-start;
+  aspect-ratio: 1.04;
+  width: 29px;
+}
+
+.icon-right {
+  object-fit: contain;
+  flex-shrink: 0;
+  aspect-ratio: 1.1;
+  width: 34px;
+}
+
+.successful-restock {
+  margin-top: 96px;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #64748b; /* slate-500 */
+  width: 373px;
+  line-height: 1.2;
+}
+
+.confirmation-image {
+  object-fit: contain;
+  margin-top: 112px;
+  max-width: 100%;
+  aspect-ratio: 1.17;
+  width: 216px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.back-button {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  margin-top: 128px;
+  width: 100%;
+  max-width: 304px;
+  min-height: 58px;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: white;
+  background-color: #64748b; /* slate-500 */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.state-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  align-self: stretch;
+  padding: 0 16px;
+  min-height: 32px;
+  min-width: 240px;
+}
+
+@media (max-height: 874px) {
+  .saf-fuel-stock-page {
+    height: 100vh;
+  }
+
+  .successful-restock {
+    margin-top: 10vh;
+  }
+
+  .confirmation-image {
+    margin-top: 12vh;
+  }
+
+  .back-button {
+    margin-top: 14vh;
+  }
+}
+
+@media (max-width: 402px) {
+  .saf-fuel-stock-page {
+    width: 100%;
+  }
+
+  .successful-restock {
+    width: 90%;
+  }
+}
