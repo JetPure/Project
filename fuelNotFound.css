@@ -1,0 +1,181 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Error page container */
+.error-page {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.25rem;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #262626; /* bg-neutral-800 */
+  max-width: 393px; /* iPhone 16 Pro width */
+  min-height: 852px; /* iPhone 16 Pro height */
+  position: relative;
+}
+
+/* Header section */
+.header-section {
+  display: flex;
+  gap: 0.75rem;
+  align-self: stretch;
+  width: 100%;
+  padding-top: env(safe-area-inset-top, 0);
+}
+
+.logo-image {
+  object-fit: contain;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 1rem;
+  aspect-ratio: 1.84;
+  width: 68px;
+}
+
+.brand-container {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.brand-logo {
+  object-fit: contain;
+  flex-shrink: 0;
+  max-width: 100%;
+  aspect-ratio: 1.39;
+  width: 164px;
+}
+
+.brand-icon {
+  object-fit: contain;
+  flex-shrink: 0;
+  margin: auto 0;
+  aspect-ratio: 0.95;
+  width: 41px;
+}
+
+.icon-container {
+  display: flex;
+  gap: 0.75rem;
+  margin: auto 0;
+}
+
+.icon-one {
+  object-fit: contain;
+  flex-shrink: 0;
+  align-self: flex-start;
+  aspect-ratio: 1.04;
+  width: 29px;
+}
+
+.icon-two {
+  object-fit: contain;
+  flex-shrink: 0;
+  aspect-ratio: 1.1;
+  width: 34px;
+}
+
+/* Error title */
+.error-title {
+  margin-top: 5rem; /* Adjusted for iPhone 16 Pro */
+  font-size: 2rem; /* Slightly smaller for iPhone 16 Pro */
+  font-weight: 700;
+  text-align: center;
+  color: #64748b; /* text-slate-500 */
+}
+
+/* Error illustration */
+.error-illustration {
+  object-fit: contain;
+  margin-top: 4.5rem; /* Adjusted for iPhone 16 Pro */
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  width: 150px; /* Slightly smaller for iPhone 16 Pro */
+}
+
+/* Button container */
+.button-container {
+  margin-top: 5rem; /* Adjusted for iPhone 16 Pro */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
+
+/* Action buttons */
+.action-button {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.25rem; /* Slightly smaller for iPhone 16 Pro */
+  line-height: 1.75rem;
+  letter-spacing: normal;
+  text-align: center;
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  background-color: #64748b; /* bg-slate-500 */
+  max-width: 280px; /* Adjusted for iPhone 16 Pro */
+  min-height: 54px; /* Slightly smaller for iPhone 16 Pro */
+  border: none;
+  cursor: pointer;
+}
+.button-text {
+  display: flex;
+  gap: 0.5rem;
+  align-self: stretch;
+  padding: 0 1rem;
+  margin: auto 0;
+  min-height: 1.75rem;
+  min-width: 13rem; /* Adjusted for iPhone 16 Pro */
+}
+
+/* Hover effects */
+.action-button:hover {
+  background-color: #475569; /* slightly darker on hover */
+}
+
+.action-button:active {
+  transform: translateY(1px);
+}
+
+/* iPhone 16 Pro specific media query */
+@media only screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) {
+  .error-page {
+    height: 100vh;
+    height: -webkit-fill-available;
+  }
+
+  /* Adjust for notch */
+  .header-section {
+    padding-top: env(safe-area-inset-top, 0.5rem);
+  }
+
+  /* Adjust for home indicator */
+  .button-container {
+    padding-bottom: env(safe-area-inset-bottom, 1.5rem);
+  }
+}
+
+/* Fix for iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+  .error-page {
+    height: -webkit-fill-available;
+  }
+}

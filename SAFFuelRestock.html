@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAF Fuel Stock Page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      body {
+        background-color: #333333; /* bg-neutral-800 */
+        color: white;
+        width: 402px;
+        height: 874px;
+        margin: 0 auto;
+        overflow-x: hidden;
+      }
+
+      .container {
+        overflow: hidden;
+        padding-top: 56px; /* pt-14 */
+        padding-bottom: 36px; /* pb-9 */
+        margin: 0 auto;
+        width: 100%;
+        max-width: 480px;
+        background-color: #333333; /* bg-neutral-800 */
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+      }
+
+      .header {
+        display: flex;
+        gap: 12px;
+        align-self: stretch;
+        width: 100%;
+      }
+
+      .logo-container {
+        display: flex;
+        gap: 2px;
+      }
+
+      .icons-container {
+        display: flex;
+        gap: 12px;
+        margin: auto 0;
+      }
+
+      .title {
+        margin-top: 20px;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        color: #64748b; /* text-slate-500 */
+      }
+
+      .fuel-name {
+        margin-top: 40px;
+        font-size: 30px;
+        color: white;
+      }
+
+      .fuel-image {
+        margin-top: 6px;
+        border-radius: 60px;
+        width: 154px;
+        height: 154px;
+        object-fit: contain;
+      }
+
+      .amount-container {
+        display: flex;
+        gap: 8px;
+        margin-top: 28px;
+        width: 100%;
+        max-width: 326px;
+        font-size: 30px;
+        color: white;
+      }
+
+      .amount-labels {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .new-amount {
+        margin-top: 24px;
+      }
+
+      .amount-image {
+        margin: auto 0;
+        width: 113px;
+        object-fit: contain;
+      }
+
+      .amount-value {
+        align-self: flex-end;
+        margin-top: 8px;
+        margin-right: 40px;
+        width: 128px;
+        object-fit: contain;
+      }
+
+      .price-container {
+        display: flex;
+        gap: 28px;
+        align-self: flex-start;
+        margin-top: 24px;
+        margin-left: 32px;
+      }
+
+      .price-label {
+        font-size: 30px;
+        color: white;
+      }
+
+      .price-currency {
+        font-size: 20px;
+        font-weight: bold;
+        color: #64748b; /* text-slate-500 */
+      }
+
+      .price-value {
+        margin-top: 4px;
+        width: 130px;
+        object-fit: contain;
+      }
+
+      .bottom-section {
+        display: flex;
+        flex-direction: column;
+        padding-right: 56px;
+        padding-left: 20px;
+        margin-top: 56px;
+        width: 100%;
+      }
+
+      .negotiable {
+        display: flex;
+        gap: 8px;
+        align-self: flex-start;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        white-space: nowrap;
+      }
+
+      .checkbox {
+        width: 40px;
+        object-fit: contain;
+      }
+
+      .negotiable-text {
+        margin: auto 0;
+      }
+
+      .restock-button {
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+        margin-top: 56px;
+        width: 100%;
+        max-width: 295px;
+        min-height: 62px;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        color: white;
+        background-color: #64748b; /* bg-slate-500 */
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .button-text {
+        padding: 0 16px;
+        margin: auto 0;
+        min-height: 32px;
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="header">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ac06ebfbb3bc6728108e6c2b698e5e8348129a05?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420"
+            alt="Logo"
+            style="
+              object-fit: contain;
+              align-self: flex-start;
+              margin-top: 16px;
+              width: 68px;
+              aspect-ratio: 1.84;
+            "
+          />
+          <div class="logo-container">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe030afa73d7d31fc1b6597de39e764ac88ed4f6?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420"
+              alt="Logo part 1"
+              style="object-fit: contain; width: 164px; aspect-ratio: 1.39"
+            />
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/07ba7a96e1edd85597947bfebd68f6b94ca05eac?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420"
+              alt="Logo part 2"
+              style="
+                object-fit: contain;
+                margin: auto 0;
+                width: 41px;
+                aspect-ratio: 0.95;
+              "
+            />
+          </div>
+          <div class="icons-container">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/e7414ab95f78dee3565dcb3c424c93eb7e07e232?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420"
+              alt="Icon 1"
+              style="
+                object-fit: contain;
+                align-self: flex-start;
+                width: 29px;
+                aspect-ratio: 1.04;
+              "
+            />
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f376d756e9e87797d59ddcefc759825ca7c26ff6?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420"
+              alt="Icon 2"
+              style="object-fit: contain; width: 34px; aspect-ratio: 1.1"
+            />
+          </div>
+        </div>
+        <div class="title">SAF Fuel Found</div>
+        <div class="fuel-name">Fuel Name</div>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f329fe7d2d9ea704506d5e21e6da16beab918c0?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420" alt="Fuel" class="fuel-image" />
+        <div class="amount-container">
+          <div class="amount-labels">
+            <div>Current Amount:</div>
+            <div class="new-amount">New Amount:</div>
+          </div>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2757cbadd8057856a98a311b8c9d9b6be7c6f62b?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420" alt="Amount" class="amount-image" />
+        </div>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e98f8ae73fce398e51c9ca2ef952f09b04d8af1?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420" alt="Amount value" class="amount-value" />
+        <div class="price-container">
+          <div class="price-label">Price:</div>
+          <div class="price-currency">AED</div>
+        </div>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c69c710c8632168a4bf509a8facb7e8b4b1dce9?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420" alt="Price value" class="price-value" />
+      </div>
+      <div class="bottom-section">
+        <div class="negotiable">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/40c82687be8329b265e1879f5dca37ec52f37284?placeholderIfAbsent=true&apiKey=46188f89aad14a83a8560e13565d4420" alt="Checkbox" class="checkbox" />
+          <div class="negotiable-text">Negotable</div>
+        </div>
+        <div class="restock-button">
+          <div class="button-text">Restock Fuel</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

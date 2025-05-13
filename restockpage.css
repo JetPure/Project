@@ -1,0 +1,235 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main container */
+.update-fuel-stock-page {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 4rem 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 480px;
+  background-color: #262626; /* neutral-800 */
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: space-between;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.logo-left {
+  align-self: flex-start;
+  margin-top: 1.5rem;
+  width: 68px;
+  aspect-ratio: 1.84;
+}
+
+.logo-group {
+  display: flex;
+}
+
+.logo-center {
+  max-width: 100%;
+  width: 164px;
+  aspect-ratio: 1.39;
+}
+
+.logo-top {
+  align-self: flex-start;
+  margin-top: 1.5rem;
+  width: 41px;
+  aspect-ratio: 0.95;
+}
+
+.logo-middle {
+  margin: auto 0;
+  width: 29px;
+  aspect-ratio: 1.04;
+}
+
+.logo-right {
+  margin: auto 0;
+  width: 34px;
+  aspect-ratio: 1.1;
+}
+
+/* Page title */
+.page-title {
+  align-self: center;
+  margin-top: 1.5rem;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: #64748b; /* slate-500 */
+}
+
+/* Fuel sections */
+.fuel-section {
+  margin-top: 5rem;
+}
+
+.fuel-section-vertical {
+  display: flex;
+  gap: 0.875rem;
+  align-self: center;
+}
+
+.fuel-section-horizontal {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.fuel-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.fuel-name-container {
+  display: flex;
+  gap: 0.75rem;
+  align-self: flex-start;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+.fuel-name-container.horizontal {
+  flex: 1;
+  gap: 1px;
+  margin-top: 0;
+}
+
+.fuel-icon {
+  object-fit: contain;
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 2.5rem;
+  aspect-ratio: 1.05;
+}
+
+/* Input fields */
+.input-field {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  height: 29px;
+  width: 213px;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #64748b; /* slate-500 */
+}
+
+.horizontal-input {
+  margin-top: -1px;
+  margin-left: 2.5rem;
+}
+
+.fuel-input {
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.fuel-input::placeholder {
+  opacity: 0.5;
+}
+
+/* Buttons */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.restock-button {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  min-height: 3.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #64748b; /* slate-500 */
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.restock-button.horizontal {
+  flex: 1;
+  margin-top: 0.5rem;
+}
+
+.indicator {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  margin-top: 1.25rem;
+  height: 0.875rem;
+  width: 22px;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #64748b; /* slate-500 */
+}
+
+/* Footer */
+.footer {
+  align-self: center;
+  margin-top: 7rem;
+  width: 100%;
+  max-width: 304px;
+}
+
+.back-button {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 58px;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #64748b; /* slate-500 */
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border: none;
+  cursor: pointer;
+}
